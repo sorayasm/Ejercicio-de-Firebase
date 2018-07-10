@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gif Chat Laboratoria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <div>
+        <!--Login-->
+        <div id="loggedIn">
+            <p id="username"></p>
+            <input id="logout" type="button" onclick="logoutWithFirebase()" value="LOGOUT">
+        </div>
+        <!--Autenticacion-->
+        <div id="loggedOut">
+            <input type="email" id="email">
+            <input type="password" id="password">
+            <input type="button" id="registerbutton" onclick="registerWithFirebase()" value="REGISTER">
+            <input type="button" id="loginbutton" onclick="loginWithFirebase()" value="LOGIN">
+            <input type="button" id="facebookbutton" onclick="facebookLoginWithFirebase()" value="FACEBOOK LOGIN">
+
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCgR90bzBJceqBW6NFM1iHKH8RbQlIMCzg",
+                authDomain: "gifchatlab.firebaseapp.com",
+                databaseURL: "https://gifchatlab.firebaseio.com",
+                projectId: "gifchatlab",
+                storageBucket: "",
+                messagingSenderId: "119153698388"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="app.js"></script>
+</body>
+
+</html>
